@@ -36,7 +36,12 @@ There are templates in the `articles` folder that can be used as a starting poin
 - The editor will mark the pull-request as accepted and merge it
 - There may be extra steps the editorial team takes to make your submission live
 
-## Reviewer Instructions
+## Templates
+
+There are example templates provided that provide a starting place for your proceedings, the linked PRs have comments to the build process as examples.
+
+- MyST Markdown with supporting Jupyter Notebooks [article.md](./articles/00_template_full/article.md) (PR: [#1](https://github.com/curvenote-examples/proceedings-submissions/pull/1))
+- Jupyter Notebook as an article [article.ipynb](./articles/00_template_nb/article.ipynb) (PR: [#2](https://github.com/curvenote-examples/proceedings-submissions/pull/2))
 
 [myst]: https://mystmd.org
 [install]: https://mystmd.org/guide/quickstart
