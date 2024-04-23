@@ -1,0 +1,83 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: example-template-nb
+  # Title will be pulled directly from the first header of the article
+  # or you can specify title in the page frontmatter of the article
+  title: La Palma Seismicity 2021
+  subtitle: An analysis of earthquake swarms in relation to the 2021 eruption
+  authors:
+    - id: spurves
+      name: Steve Purves
+      orcid: 0000-0002-0760-5497
+      corresponding: true
+      email: steve@curvenote.com
+      roles:
+        - Investigation
+        - Project administration
+        - Software
+        - Visualization
+      affiliations:
+        - curvenote
+    - id: rcockett
+      name: Rowan Cockett
+      orcid: 0000-0002-7859-8394
+      corresponding: false
+      roles: []
+      affiliations:
+        - curvenote
+  affiliations:
+    - id: curvenote
+      name: Curvenote
+      department: Engineering Team
+      address: 123 Main St.
+      city: NYC
+      state: New York
+      postal_code: '10001'
+      country: USA
+      isni: '0000000000000000'
+      url: https://curvenote.com
+      email: support@curvenote.com
+      phone: 123-456-7890
+      fax: 123-456-7891
+  github: https://github.com/Notebooks-Now/submission-myst-lite
+  open_access: true
+  license:
+    content: CC-BY-SA-4.0
+    code: MIT
+  funding:
+    - statement: This work was supported by Notebooks Now! at AGU.
+      open_access: Users are allowed to read, download, copy, distribute, print, search, or link to this template, or use it for any other lawful purpose, without asking prior permission
+      id: agu-0000
+      sources:
+        - id: agu
+          name: American Geophysical Union
+      investigators:
+        - spurves
+        - rcockett
+      recipients:
+        - name: Franklin Koch
+          affiliations:
+            - curvenote
+  keywords:
+    - La Palma
+    - Earthquakes
+  date: 2022-05-11
+  requirements:
+    - environment.yml
+  resources:
+    - README.md
+  banner: ./images/banner.png
+  exports:
+    - format: jats
+      article: article.ipynb
+    - format: pdf
+      article: article.ipynb
+      template: agu2019
+      journal_name: Notebooks Now!
+      draft: false
+    - format: meca
+      article: article.ipynb
+      output: meca.zip
+site:
+  template: article-theme
