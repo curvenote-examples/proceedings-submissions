@@ -1,0 +1,59 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: example-template-full
+  title: La Palma Seismicity 2021
+  subtitle: An analysis of earthquake swarms in relation to the 2021 eruption
+  authors:
+    - id: spurves
+      name: Steve Purves
+      orcid: 0000-0002-0760-5497
+      corresponding: true
+      email: steve@curvenote.com
+      roles:
+        - Investigation
+        - Project administration
+        - Software
+        - Visualization
+      affiliations:
+        - curvenote
+    - id: rcockett
+      name: Rowan Cockett
+      orcid: 0000-0002-7859-8394
+      corresponding: false
+      role: Project administration
+      affiliations:
+        - curvenote
+  affiliations:
+    - id: curvenote
+      name: Curvenote Inc.
+      department: Publications Team
+      country: Canada
+      url: https://curvenote.com
+      email: support@curvenote.com
+      phone: 123-456-7890
+      fax: 123-456-7891
+  open_access: true
+  license:
+    content: CC-BY-SA-4.0
+    code: MIT
+  funding:
+    - statement: Supported by Notebooks Now! at AGU
+      id: 10070
+      source:
+        - name: Alfred P. Sloan Foundation
+          doi: http://dx.doi.org/10.13039/100000879
+  subject: Original Submission
+  keywords:
+    - La Palma
+    - Earthquakes
+  date: 2022-10-11
+  requirements:
+    - environment.yml
+  resources:
+    - README.md
+    - data/catalogoComunSV_1663233588717.csv
+    - data/lapalma_ign.csv
+  banner: ./images/banner.png
+site:
+  template: article-theme
