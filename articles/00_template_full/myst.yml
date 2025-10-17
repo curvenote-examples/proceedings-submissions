@@ -55,5 +55,11 @@ project:
     - data/catalogoComunSV_1663233588717.csv
     - data/lapalma_ign.csv
   banner: ./images/banner.png
+  toc:
+    - file: article.md
+    - file: notebooks/seismic-monitoring.md
+    - file: notebooks/data-screening.ipynb
+    - file: notebooks/visualization-figure-creation-seaborn.ipynb
+
 site:
   template: article-theme

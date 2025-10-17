@@ -1,0 +1,28 @@
+# This action submits an article to the site when a pull request is merged
+name: Submit article
+# You may change the trigger for this action, depending on your desired workflow
+on:
+  push:
+    branches: ['main']
+permissions:
+  # This write permission is only for commenting on the commit
+  contents: write
+jobs:
+  submit:
+    uses: curvenote/actions/.github/workflows/submit.yml@v1
+    with:
+      # The pattern is helpful if you require authors to create their own unique ID
+      # This must be globally unique in Curvenote, please prefix it with your site if you enforce it
+      id-pattern-regex: '^cn-testing-(?:[a-zA-Z0-9-_]{3,30})$'
+      # This enforces each PR only includes a single article.
+      enforce-single-folder: true
+      # Update this with your site name
+      venue: cn-testing
+      kind: article
+      # collection: ''
+      path: articles/*
+    secrets:
+      # CURVENOTE_TOKEN must be set as an org or repository secret
+      CURVENOTE: ${{ secrets.CURVENOTE_TOKEN }}
+      # GITHUB_TOKEN is automatically available to GitHub actions
+      GITHUB: ${{ secrets.GITHUB_TOKEN }}

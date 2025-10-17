@@ -1,0 +1,30 @@
+# This action creates a draft preview when an article pull request is opened
+name: Build draft preview
+# You may change the trigger for this action, depending on your desired workflow
+on:
+  pull_request_target:
+    branches: ['main']
+    types: [labeled, opened, synchronize, reopened]
+permissions:
+  contents: read
+  # This write permission allows a comment with a link to the draft to be created
+  pull-requests: write
+jobs:
+  build-preview:
+    uses: curvenote/actions/.github/workflows/draft.yml@v1
+    with:
+      # The pattern is helpful if you require authors to create their own unique ID
+      # This must be globally unique in Curvenote, please prefix it with your site if you enforce it
+      id-pattern-regex: '^cn-testing-(?:[a-zA-Z0-9-_]{3,30})$'
+      # This enforces each PR only includes a single article.
+      enforce-single-folder: true
+      # Update this with your site name
+      venue: cn-testing
+      kind: article
+      # collection: ''
+      path: articles/*
+    secrets:
+      # CURVENOTE_TOKEN must be set as an org or repository secret
+      CURVENOTE: ${{ secrets.CURVENOTE_TOKEN }}
+      # GITHUB_TOKEN is automatically available to GitHub actions
+      GITHUB: ${{ secrets.GITHUB_TOKEN }}

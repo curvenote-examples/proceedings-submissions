@@ -28,7 +28,7 @@ There are templates in the `articles` folder that can be used as a starting poin
 - Run `curvenote start`, open the main article file, edit the content, save and see the changes in real time
 - Write up your research, including any associated Jupyter Notebooks, reproducible content etc.
 - Commit your content to git, ensuring you only make changes in your single folder
-- Open a pull request against the origin repository, label your PR with `article`
+- Open a pull request against the origin repository
 - See the GitHub actions run, and make a comment on your PR with the check results and a link to your preview
 <!-- update `venue` here as well as add `--kind` and/or `--collection` if appropriate -->
 - To run these checks locally, you may run `curvenote check <venue>`
