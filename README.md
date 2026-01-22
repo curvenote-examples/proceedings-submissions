@@ -14,7 +14,7 @@ Welcome to our conference `[our conference name and date, etc.]`, this year we a
 
 ## Author Instructions
 
-We accept three types of papers that are powered by the `mystmd` build engine ([mystmd.org][myst]): MyST Markdown articles, LaTeX documents, or Jupyter Notebooks. All submissions formats are powered by [`mystmd`][myst], and are focused on the web-first presentation of scientific content. Please only use LaTeX if you are already familiar with writing papers in LaTeX, and note that many macros will not be supported.
+We accept three types of papers that are powered by the `mystmd` build engine ([mystmd.org][myst]): MyST Markdown articles, LaTeX documents, or Jupyter Notebooks. All submission formats are powered by [`mystmd`][myst], and are focused on the web-first presentation of scientific content. Please only use LaTeX if you are already familiar with writing papers in LaTeX, and note that many macros will not be supported.
 
 There are templates in the `articles` folder that can be used as a starting point for your submission. These templates include formatting, references, math, tables and images. This overview assumes familiarity with GitHub and Git.
 
